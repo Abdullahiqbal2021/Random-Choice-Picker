@@ -1,25 +1,31 @@
 const tagsEl = document.getElementById("tags");
 const textarea = document.getElementById('textarea');
+let btnChoose = document.getElementById("btn-choose");
 
 textarea.focus();
 
-textarea.addEventListener('keyup', (e) =>{
+textarea.addEventListener('keyup', (e) => {
   createTags(e.target.value);
 
+  
+
   if (e.key == 'Enter') {
-    setTimeout(() => {
-      e.target.value = ''
-    }, 10);
-    
+    // setTimeout(() => {
+    //   e.target.value = ''
+    // }, 10);
+
     randomSelect();
   }
 })
+btnChoose.addEventListener("click",()=>{
+  randomSelect();
 
-function createTags(input ) {
+})
+function createTags(input) {
 
   const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
   // console.log(tags);
-  
+
   tagsEl.innerHTML = ''
 
   tags.forEach(tag => {
@@ -34,14 +40,12 @@ function randomSelect() {
   const tags = document.querySelectorAll('.tag')
   if (tags.length < 10) {
     var times = tags.length * 3;
-  }else if (tags.length < 30) {
+  } else if (tags.length < 30) {
     var times = tags.length * 2;
-  }else{
+  } else {
     var times = tags.length;
 
   }
-  console.log(times);
-  console.log(tags.length);
 
 
   const interval = setInterval(() => {
@@ -71,11 +75,11 @@ function pickRandomTag() {
 
 }
 
-function highLightTag(tag){
+function highLightTag(tag) {
   tag.classList.add('highlight')
 }
 
-function unhighLightTag(tag){
+function unhighLightTag(tag) {
   tag.classList.remove('highlight')
 }
 

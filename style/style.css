@@ -12,6 +12,7 @@ body{
 .container{
   padding: 0 15px;
   display: flex;
+  flex-direction: column;
 }
 h2{
   text-align: center;
@@ -43,4 +44,24 @@ textarea{
 }
 .highlight{
   background-color: blue;
+}
+#btn-choose{
+  margin: 6px auto;
+  padding: 6px 10px;
+  background-color: orange;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  width: 30%;
+  
+
+}
+
+@media (max-width:500px) {
+  .container textarea{
+    width: 100%;
+  }
+  h2{
+    font-size: 15px;
+  }
 }
