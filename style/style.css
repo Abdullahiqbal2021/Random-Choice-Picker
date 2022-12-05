@@ -1,32 +1,47 @@
-*{
+* {
   box-sizing: border-box;
   font-family: system-ui;
 }
-body{
-  background-color: rgb(0, 204, 255);
+
+body {
+  background-color: #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.main-container{
-  padding: 10px;
-  
+
+.main-container {
+  width: 80%;
+  padding: 10px 20px;
+  background-color: rgb(97, 97, 97);
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 2px 4px 20px black;
 }
-.container{
+
+.container {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
 }
-h2{
+
+h2 {
   text-align: center;
 }
-textarea{
+
+textarea {
   font-size: 20px;
-  padding: 4px 8px;
+  padding: 6px 12px;
   width: 70%;
   outline: none;
-  border: 2px solid orange;
+  border: 1px solid black;
   height: 150px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
 }
-#tags{
+
+#tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,34 +49,41 @@ textarea{
   width: 70%;
   margin: 0 auto;
 }
-.tag{
-  background-color: orange;
+
+.tag {
+  background-color: #373737;
+  /* background: radial-gradient(white,black); */
   margin: 7px 3px;
-  padding: 4px 14px;
+  padding: 6px 18px;
   color: white;
-  border: 1px solid rgb(184, 120, 3);
+  border: 1px solid black;
   border-radius: 20px;
 }
-.highlight{
+
+.highlight {
   background-color: blue;
 }
-#btn-choose{
-  margin: 6px auto;
-  padding: 6px 10px;
-  background-color: orange;
-  color: white;
-  outline: none;
-  border-radius: 10px;
-  width: 30%;
-  
 
+#btn-choose {
+  margin: 10px auto;
+  padding: 6px 10px;
+  background-color: white;
+  color: black;
+  outline: none;
+  border-radius: 30px;
+  width: 20%;
+  min-width: 100px;
 }
 
 @media (max-width:500px) {
-  .container textarea{
+  .main-container{
     width: 100%;
   }
-  h2{
+  .container textarea {
+    width: 100%;
+  }
+
+  h2 {
     font-size: 15px;
   }
 }
